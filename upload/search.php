@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +62,7 @@ margin-bottom: 30px;
 <h2 class="text-success"><strong>TELANGANA STATE POLICE, INTELLIGENCE</strong></h2>
 </div>
 <div class="card-body">
-<form action="upload.php" method="post" enctype="multipart/form-data">
+<form action="Image.php" method="post" enctype="multipart/form-data">
 <div class="form-group">
 <label for="party">Name of the Party</label>
 <select class="form-control" id="party-dropdown" name="party_id">
@@ -89,16 +88,14 @@ while($row = mysqli_fetch_array($result)) {
 
 <label for="name">Name of the Image</label><br>
   <input type="text" id="img_name" name="img_name"><br><br>
-  <label for="date">Please select your Date</label><br>
-  <input type="date" id="date" name="date"><br><br>
-    Select Image File to Upload<br><br>
-    <input type="file" id="image" name="image[]" multiple>
-    <input type="submit" name="submit" value="Upload">
+  <label for="date">From Date</label><br>
+  <input type="date" id="date" name="from_date"><br><br>
+  <label for="date">To Date</label><br>
+  <input type="date" id="date" name="to_date"><br><br>
+   Search images<br><br>
+    <input type="submit" name="submit" value="Search Images">
 </form>
 <br><br><br>
-<a href="search.php">
-<input type="button" name="search" value="Search images">
-</a>
 </div>     
 
 </div>
@@ -127,5 +124,8 @@ var leader_id = this.value;
 });
 });
 </script>
+
+</body>
+</html>
 </body>
 </html>
