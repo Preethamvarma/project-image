@@ -26,7 +26,7 @@ $img_name = $_POST['img_name'];
 $fdate = $_POST['fdate'];
 $tdate = $_POST['tdate'];
 		
-		$res=mysqli_query($conn, "SELECT * FROM image WHERE  party_id = $party_id AND leader_id = $leader_id   OR  img_name = '$img_name'  OR ( date BETWEEN '$fdate' AND '$tdate' ) ");
+		$res=mysqli_query($conn, "SELECT * FROM image WHERE  party_id = $party_id AND leader_id = $leader_id  AND ( date BETWEEN '$fdate' AND '$tdate' )  OR  img_name = '$img_name'  ");
 			while($row=mysqli_fetch_array($res)) 
 			{
 				echo '<tr> 
